@@ -8,10 +8,8 @@ jar_name=conferencemgmt.jar
 mvn clean install
 
 if [ -z "$1" ] ; then
-        java -jar $dir/$jar_name
-        exit 1
-
+	echo "File Path as Argument is mandatory. Usage java -jar <jar_full_path>  <file_path>"
+    exit 1
 else
 	java -jar $dir/$jar_name $arg1
-
 fi
